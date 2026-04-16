@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>GreenFarm Mushrooms</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+
+<header>
+    <div class="navbar">
+
+        <h1 class="logo">🍄 GreenFarm</h1>
+
+        <nav>
+            <a href="#">Home</a>
+            <a href="#about">About</a>
+            <a href="#products">Products</a>
+            <a href="#contact" class="nav-btn">Order Now</a>
+        </nav>
+
+    </div>
+</header>
+
+<section class="hero">
+    <div class="hero-content">
+
+        <h1>🍄 Fresh Organic Mushrooms</h1>
+
+        <p class="tagline">
+            Healthy • Chemical-Free • Direct from Farm
+        </p>
+
+        <p class="description">
+            We provide premium quality mushrooms grown with natural methods. 
+            Our farm ensures fresh delivery, high nutrition, and best taste 
+            for your healthy lifestyle.
+        </p>
+
+        <!-- Features -->
+        <div class="hero-features">
+            <span>✔ 100% Organic</span>
+            <span>✔ High Protein</span>
+            <span>✔ Daily Fresh Supply</span>
+        </div>
+
+        <!-- Buttons -->
+        <div class="hero-buttons">
+            <a href="#products" class="btn">Order Now</a>
+            <a href="#about" class="btn secondary">Learn More</a>
+        </div>
+
+    </div>
+</section>
+
+<section id="about" class="about">
+    <h2 data-aos="fade-up">About Us</h2>
+    <div class="about-container">
+
+        <!-- IMAGE -->
+        <div class="about-image" data-aos="fade-left">
+            <img src="background image.jpeg" alt="Mushrooms">
+        </div>
+
+        <!-- TEXT -->
+        <div class="about-text" data-aos="fade-right">
+
+            <span class="about-badge">🌿 Natural Farming</span>
+
+            <h2>Fresh & Healthy <span>Mushrooms</span></h2>
+
+            <p>
+                Our mushrooms are grown using organic farming techniques with no harmful chemicals. 
+                Packed with protein, vitamins, and antioxidants, they help boost immunity and support a healthy lifestyle.
+            </p>
+
+            <!-- FEATURES -->
+            <div class="about-features">
+                <div>✔ 100% Organic</div>
+                <div>✔ High Nutrition</div>
+                <div>✔ Farm Fresh</div>
+                <div>✔ Daily Supply</div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<!-- Products Section -->
+<section id="products" class="products">
+
+    <h2 data-aos="fade-up">Our Products</h2>
+
+    <div class="product-grid">
+
+        <!-- CARD 1 -->
+        <div class="card" data-aos="zoom-in" data-aos-delay="100">
+            <img src="image.png" alt="Button Mushroom">
+            <h3>Button Mushroom</h3>
+            <p>₹120 / kg</p>
+            <button onclick="orderNow('Button Mushroom')">Order</button>
+        </div>
+
+        <!-- CARD 2 -->
+        <div class="card" data-aos="zoom-in" data-aos-delay="300">
+            <img src="imagemush.jpeg" alt="Oyster Mushroom">
+            <h3>Oyster Mushroom</h3>
+            <p>₹150 / kg</p>
+            <button onclick="orderNow('Oyster Mushroom')">Order</button>
+        </div>
+
+    </div>
+
+</section>
+<!-- Contact section -->
+
+<section id="contact" class="contact" data-aos="fade-up">
+
+    <h2 data-aos="fade-down">Order Now</h2>
+
+    <form onsubmit="submitForm(event)" data-aos="zoom-in">
+
+        <input type="text" id="name" placeholder="full_name" required>
+        <input type="tel" id="mobile" placeholder="mobile_number" required>
+        <textarea id="message" placeholder="order_details" required></textarea>
+
+        <button type="submit">Submit</button>
+    </form>
+
+</section>
+<script src="script.js"></script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+
+</body>
+</html>
