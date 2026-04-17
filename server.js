@@ -9,17 +9,19 @@ const app = express();
 app.use(cors());
 app.use(bodyParser.json());
 
-// FILE PATH FIX
+// Serve frontend
+app.use(express.static(path.join(__dirname)));
+
+// FILE PATH
 const filePath = path.join(__dirname, "data.json");
 
-// SAVE DATA
+// API
 app.post("/contact", (req, res) => {
     try {
         const { name, mobile, message } = req.body;
 
         const newData = { name, mobile, message };
 
-        // read file safely
         let data = [];
 
         if (fs.existsSync(filePath)) {
@@ -27,10 +29,8 @@ app.post("/contact", (req, res) => {
             data = fileContent ? JSON.parse(fileContent) : [];
         }
 
-        // push new data
         data.push(newData);
 
-        // write file
         fs.writeFileSync(filePath, JSON.stringify(data, null, 2));
 
         console.log("✅ DATA SAVED:", newData);
@@ -43,6 +43,9 @@ app.post("/contact", (req, res) => {
     }
 });
 
-app.listen(5000, () => {
-    console.log("Server running on port 5000");
+// ✅ IMPORTANT FIX
+const PORT = process.env.PORT || 5000;
+
+app.listen(PORT, () => {
+    console.log(`Server running on port ${PORT}`);
 });
