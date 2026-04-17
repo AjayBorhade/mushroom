@@ -5,7 +5,7 @@ function submitForm(e) {
     let mobile = document.getElementById("mobile").value;
     let message = document.getElementById("message").value;
 
-    fetch("http://localhost:5000/contact", {
+    fetch("https://mushroom-6dto.onrender.com/contact", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
